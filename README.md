@@ -1,2 +1,0 @@
-# munin
-Generic data viwer
