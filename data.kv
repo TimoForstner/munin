@@ -1,0 +1,84 @@
+#:kivy 1.0.9
+
+
+
+<DataViewer>:
+    
+    #canvas:
+    #   Rectangle:
+    #        pos: self.center_x - 5, 0
+    #        size: 10, self.height
+    
+    Label:
+        font_size: 70  
+        center_x: root.width / 6
+        top: root.top - 10
+        text: "Munin"
+        
+    # Label:
+    #     font_size: 70  
+    #     center_x: root.width * 3 / 4
+    #     top: root.top - 50
+    #     text: "Auch egal"
+
+            
+    # Label:
+    #     font_size: 10
+    #     center_x: root.width * 3 / 4
+    #     top: root.top - 100
+    #     text: "Auch egal"
+
+    BoxLayout:
+
+        size: 300, 200 # self.height
+        padding: 10
+        spacing: 15
+        
+        canvas.before:
+            Color: 
+                rgba: 0, 1, 0, 1
+            Rectangle:
+                # self here refers to the widget i.e FloatLayout
+                pos: self.pos
+                size: self.size
+
+        orientation: 'vertical'
+        #pos: 50, 30
+        top: root.top - 120
+        left: -50
+
+        Label:
+            text_size: self.size
+            halign: 'left'
+            font_size: 25
+            text: "Wahrscheinlichkeiten"
+
+        BoxLayout:
+            Label:
+                text_size: self.size
+                halign: 'left'
+                text: "Leer:"    
+            Label:
+                text: root.prob_empty
+        BoxLayout:
+            Label:
+                text_size: self.size
+                halign: 'left'
+                text: "Ergonomisch:"  
+            Label:
+                text: root.prob_ergo
+        BoxLayout:
+            Label:
+                text_size: self.size
+                halign: 'left'
+                text: "Gebeugt:"    
+            Label:
+                text: root.prob_hunch
+        BoxLayout:
+            Label:
+                text_size: self.size
+                halign: 'left'
+                text: "Zurückgelehnt:"    
+            Label:
+                text: root.prob_layback
+            

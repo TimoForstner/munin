@@ -11,3 +11,5 @@ https://kivy.org/doc/stable/installation/installation-linux.html
 
 * Read MQTT topics
 * Read JSON files
+
+* Auswahl Menu für Werte auf Basis des Dicts
